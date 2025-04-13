@@ -23,8 +23,8 @@ tkinter (Python自带，无需单独安装)
 
 1. 克隆仓库：
    ```
-   git clone https://github.com/yourusername/yoloobb-converter.git
-   cd yoloobb-converter
+   git clone https://github.com/BIANG-qilie/LabelimgOBB2YOLOOBB.git
+   cd LabelimgOBB2YOLOOBB
    ```
 
 2. 安装依赖：

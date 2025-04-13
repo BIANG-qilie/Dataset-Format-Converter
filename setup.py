@@ -6,12 +6,12 @@ with open("README.md", "r", encoding="utf-8") as fh:
 setup(
     name="yoloobb-converter",
     version="0.1.0",
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="Blake Zhu",
+    author_email="2112304124@mail2.gdut.edu.cn",
     description="一个用于转换YOLOOBB和labelimgOBB格式的工具",
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url="https://github.com/yourusername/yoloobb-converter",
+    url="https://github.com/BIANG-qilie/LabelimgOBB2YOLOOBB.git",
     packages=find_packages(),
     py_modules=["convert_labels", "convert_labels_gui"],
     install_requires=[
