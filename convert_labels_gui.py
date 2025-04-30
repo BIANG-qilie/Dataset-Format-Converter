@@ -83,13 +83,16 @@ class ClassesInputDialog(tk.Toplevel):
         self.imported_classes = []  # 从文件导入的类别
         
         # 设置窗口大小和位置
-        window_width = 750  # 增加窗口宽度以适应新按钮和预览区域
-        window_height = 600 # 增加高度以显示更多类别
+        window_width = 800  # 增加窗口宽度
+        window_height = 700  # 增加窗口高度
         screen_width = self.winfo_screenwidth()
         screen_height = self.winfo_screenheight()
         x = (screen_width - window_width) // 2
         y = (screen_height - window_height) // 2
         self.geometry(f"{window_width}x{window_height}+{x}+{y}")
+        
+        # 设置最小窗口大小
+        self.minsize(800, 700)
         
         # 设置背景色
         self.configure(background="#f0f0f0")

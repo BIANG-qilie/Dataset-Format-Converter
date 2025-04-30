@@ -29,7 +29,8 @@ tkinter (Python自带，无需单独安装)
 
 2. 安装依赖：
    ```
-   pip install -r requirements.txt
+   conda env create -f environments.yml
+   conda activate convert_dataset
    ```
 
 ## 使用方法

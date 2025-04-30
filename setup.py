@@ -16,6 +16,16 @@ setup(
     py_modules=["convert_labels", "convert_labels_gui"],
     install_requires=[
         "numpy>=1.19.0",
+        "pyqt5>=5.15.0",
+        "lxml>=4.9.0",  
+        "pyqt5-qt5>=5.15.0",
+        "pyqt5-sip>=12.9.0",
+        "setuptools>=49.0.0",
+        "wheel>=0.37.0",
+        "wincertstore>=0.2.0",
+        "certifi>=2020.6.20",
+        "pip>=20.0.2",
+        "conda>=4.10.0",
     ],
     classifiers=[
         "Programming Language :: Python :: 3",
