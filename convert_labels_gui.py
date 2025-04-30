@@ -363,11 +363,11 @@ class ClassesInputDialog(tk.Toplevel):
         
         # 更新输入框中的类别名称
         for i, class_id in enumerate(sorted_class_ids):
-            if i < len(preset_classes):
+            if class_id < len(preset_classes):
                 # 清除当前内容
                 self.class_entries[class_id].delete(0, tk.END)
                 # 插入预设类别名称
-                self.class_entries[class_id].insert(0, preset_classes[i])
+                self.class_entries[class_id].insert(0, preset_classes[class_id])
 
         # 显示应用成功的消息
         preset_name = "DOTA v1" if preset_type == "dota" else "COCO"
