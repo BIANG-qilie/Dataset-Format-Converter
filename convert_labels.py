@@ -191,8 +191,7 @@ def labelimgOBB2YOLOOBB(input_file, output_file, img_width=None, img_height=None
         for i in range(4):
             new_line += f" {rotated_corners[i, 0]:.6f} {rotated_corners[i, 1]:.6f}"
         
-        # 添加置信度，统一设为1.0，不添加跟踪ID
-        new_line += f" 1.000000\n"
+        new_line += f"\n"
         
         converted_lines.append(new_line)
     
@@ -398,6 +397,8 @@ def main():
         txt_files = glob.glob(os.path.join(input_dir, "*.txt"))
         for input_path in txt_files:
             filename = os.path.basename(input_path)
+            if filename=="classes.txt":
+                continue
             output_path = os.path.join(output_dir, filename)
             
             print(f"转换 {filename}...")

@@ -936,6 +936,8 @@ class ConvertLabelsGUI(tk.Tk):
             
             for input_path in txt_files:
                 filename = os.path.basename(input_path)
+                if filename=="classes.txt":
+                    continue
                 output_path = os.path.join(output_dir, filename)
                 print(f"转换 {filename}...")
                 labelimgOBB2YOLOOBB(input_path, output_path, img_width, img_height)
