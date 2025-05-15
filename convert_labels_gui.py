@@ -934,6 +934,40 @@ class ConvertLabelsGUI(tk.Tk):
             print("\n开始转换文件...")
             txt_files = glob.glob(os.path.join(input_dir, "*.txt"))
             
+            # 检查是否存在classes.txt文件
+            classes_path = os.path.join(input_dir, "classes.txt")
+            class_names = []
+            if os.path.exists(classes_path):
+                with open(classes_path, 'r', encoding='utf-8') as f:
+                    class_names = [line.strip() for line in f.readlines() if line.strip()]
+                print(f"读取到类别文件，共{len(class_names)}个类别")
+                
+                # 复制classes.txt到输出目录
+                shutil.copy(classes_path, os.path.join(output_dir, "classes.txt"))
+                
+                # 生成class_names.txt文件
+                class_names_path = os.path.join(output_dir, "class_names.txt")
+                with open(class_names_path, 'w', encoding='utf-8') as f:
+                    for name in class_names:
+                        f.write(f"{name}\n")
+                print(f"已生成class_names.txt文件: {class_names_path}")
+                
+                # 生成dataset.yaml文件
+                yaml_path = os.path.join(output_dir, "dataset.yaml")
+                with open(yaml_path, 'w', encoding='utf-8') as f:
+                    f.write("path: ./your_dataset  # 修改为您的数据集根目录\n")
+                    f.write("train: images/train   # 训练集路径（相对path）\n")
+                    f.write("val: images/val       # 验证集路径\n")
+                    f.write("test: images/test     # 测试集路径（可选）\n\n")
+                    f.write(f"nc: {len(class_names)}  # 类别数量\n")
+                    f.write("names: [")
+                    for i, name in enumerate(class_names):
+                        if i > 0:
+                            f.write(", ")
+                        f.write(f"'{name}'")
+                    f.write("]  # 类别名称\n")
+                print(f"已生成dataset.yaml文件: {yaml_path}")
+            
             for input_path in txt_files:
                 filename = os.path.basename(input_path)
                 if filename=="classes.txt":
