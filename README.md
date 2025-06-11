@@ -1,4 +1,4 @@
-# YOLOOBB Converter
+# labelimgobb2DOTA Converter
 
 <div align="center">
 
