@@ -179,7 +179,7 @@ mypy labelimgobb2DOTA_converter/
 
 ## 📄 文件格式说明
 
-### YOLOOBB格式
+### DOTA格式 ( [Ultralytics 的 YOLO obb的数据格式](https://docs.ultralytics.com/tasks/obb/) )
 ```
 class_id x1 y1 x2 y2 x3 y3 x4 y4
 ```
