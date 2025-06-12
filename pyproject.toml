@@ -5,9 +5,9 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "labelimgobb2DOTA-converter"
 dynamic = ["version"]
-description = "一个用于转换YOLOOBB和labelimgOBB格式的工具"
+description = "一个用于转换DOTA格式和labelimgOBB格式的工具"
 readme = "README.md"
-requires-python = ">=3.7"
+requires-python = ">=3.6"
 license = {text = "MIT"}
 authors = [
     {name = "Blake Zhu", email = "2112304124@mail2.gdut.edu.cn"},
@@ -22,6 +22,7 @@ classifiers = [
     "Intended Audience :: Science/Research",
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.6",
     "Programming Language :: Python :: 3.7",
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
@@ -71,7 +72,7 @@ version = {attr = "labelimgobb2DOTA_converter.__version__"}
 
 [tool.black]
 line-length = 88
-target-version = ['py37', 'py38', 'py39', 'py310', 'py311']
+target-version = ['py36', 'py37', 'py38', 'py39', 'py310', 'py311']
 include = '\.pyi?$'
 extend-exclude = '''
 /(
@@ -88,7 +89,7 @@ extend-exclude = '''
 '''
 
 [tool.mypy]
-python_version = "3.7"
+python_version = "3.6"
 warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = true

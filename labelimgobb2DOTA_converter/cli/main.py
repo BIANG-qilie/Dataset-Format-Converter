@@ -7,7 +7,7 @@
 import argparse
 import os
 import sys
-from typing import Optional
+from typing import Optional, Tuple
 
 from ..core.converter import DOTA2labelimgOBB, labelimgOBB2DOTA
 from ..utils.file_utils import get_unique_class_ids, get_txt_files, create_classes_file
@@ -55,7 +55,7 @@ def get_positive_int(prompt: str) -> int:
             print("请输入一个有效的整数。")
 
 
-def get_image_dimensions() -> tuple[Optional[int], Optional[int]]:
+def get_image_dimensions() -> Tuple[Optional[int], Optional[int]]:
     """获取图片尺寸"""
     use_dimensions = input("是否需要指定图片尺寸进行坐标转换？(y/n): ").lower().strip()
     

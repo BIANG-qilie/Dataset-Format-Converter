@@ -12,7 +12,7 @@ labelimgOBB2DOTA Converter - 一个用于转换DOTA和labelimgOBB格式的工具
 - 命令行界面
 """
 
-__version__ = "0.1.1"
+__version__ = "0.1.3"
 __author__ = "Blake Zhu"
 __email__ = "2112304124@mail2.gdut.edu.cn"
 
