@@ -6,7 +6,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-一个用于转换YOLOOBB和labelimgOBB格式的专业工具，支持图形界面和命令行操作。
+一个用于转换DOTA格式和labelimgOBB格式的工具，支持图形界面和命令行操作。
 
 [功能特性](#功能特性) • [安装方法](#安装方法) • [使用指南](#使用指南) • [项目结构](#项目结构) • [开发指南](#开发指南)
 
