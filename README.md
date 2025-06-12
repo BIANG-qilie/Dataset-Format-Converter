@@ -137,8 +137,8 @@ labelimgobb2DOTA-converter/
 ### 设置开发环境
 
 ```bash
-git clone https://github.com/BIANG-qilie/LabelimgOBB2YOLOOBB.git
-cd LabelimgOBB2YOLOOBB
+git clone https://github.com/BIANG-qilie/labelimgobb2DOTA.git
+cd labelimgobb2DOTA
 
 # 创建虚拟环境
 python -m venv venv
