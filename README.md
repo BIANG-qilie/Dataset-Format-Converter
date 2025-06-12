@@ -45,8 +45,8 @@ pip install labelimgobb2DOTA-converter[dev]
 ### 从源码安装
 
 ```bash
-git clone https://github.com/BIANG-qilie/LabelimgOBB2YOLOOBB.git
-cd LabelimgOBB2YOLOOBB
+git clone https://github.com/BIANG-qilie/labelimgobb2DOTA.git
+cd labelimgobb2DOTA
 pip install -e .
 ```
 
