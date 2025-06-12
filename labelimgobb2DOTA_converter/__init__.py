@@ -1,5 +1,5 @@
 """
-YOLOOBB Converter - 一个用于转换YOLOOBB和labelimgOBB格式的工具
+labelimgOBB2DOTA Converter - 一个用于转换DOTA和labelimgOBB格式的工具
 
 这个包提供了用于转换不同OBB标注格式的工具，包括：
 - DOTA格式（归一化坐标）
