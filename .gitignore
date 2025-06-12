@@ -45,4 +45,8 @@ ENV/
 
 # 操作系统文件
 .DS_Store
-Thumbs.db 
+Thumbs.db
+
+# 构建和上传脚本（不上传到git）
+build_and_upload.bat
+build_and_upload_pypi.bat 
