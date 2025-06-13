@@ -3,9 +3,9 @@ requires = ["setuptools>=45", "wheel", "setuptools_scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "labelimgobb2DOTA-converter"
+name = "obb-data-converter"
 dynamic = ["version"]
-description = "一个用于转换DOTA格式和labelimgOBB格式的工具"
+description = "多格式OBB标注转换工具 - Multi-format OBB annotation converter"
 readme = "README.md"
 requires-python = ">=3.6"
 license = {text = "MIT"}
@@ -15,7 +15,7 @@ authors = [
 maintainers = [
     {name = "Blake Zhu", email = "2112304124@mail2.gdut.edu.cn"},
 ]
-keywords = ["yolo", "obb", "object-detection", "computer-vision", "annotation-tool"]
+keywords = ["yolo", "obb", "object-detection", "computer-vision", "annotation-tool", "dota", "labelimg", "pascal-voc"]
 classifiers = [
     "Development Status :: 4 - Beta",
     "Intended Audience :: Developers",
@@ -47,6 +47,7 @@ dev = [
 ]
 gui = [
     "pillow>=8.0.0",
+    "tkinter",
 ]
 test = [
     "pytest>=6.0.0",
@@ -55,20 +56,28 @@ test = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/BIANG-qilie/LabelimgOBB2YOLOOBB"
-Documentation = "https://github.com/BIANG-qilie/LabelimgOBB2YOLOOBB#readme"
-Repository = "https://github.com/BIANG-qilie/LabelimgOBB2YOLOOBB.git"
-"Bug Tracker" = "https://github.com/BIANG-qilie/LabelimgOBB2YOLOOBB/issues"
+Homepage = "https://github.com/BIANG-qilie/obb-data-converter"
+Documentation = "https://github.com/BIANG-qilie/obb-data-converter#readme"
+Repository = "https://github.com/BIANG-qilie/obb-data-converter.git"
+"Bug Tracker" = "https://github.com/BIANG-qilie/obb-data-converter/issues"
 
 [project.scripts]
-labelimgobb2DOTA-cli = "labelimgobb2DOTA_converter.cli.main:main"
-labelimgobb2DOTA-gui = "labelimgobb2DOTA_converter.gui.main_window:main"
+obb-data-converter = "obb_data_converter.cli.main:main"
+obb-converter-gui = "obb_data_converter.gui.main_window:main"
 
 [tool.setuptools]
-packages = ["labelimgobb2DOTA_converter", "labelimgobb2DOTA_converter.core", "labelimgobb2DOTA_converter.gui", "labelimgobb2DOTA_converter.cli", "labelimgobb2DOTA_converter.utils"]
+packages = [
+    "obb_data_converter", 
+    "obb_data_converter.core", 
+    "obb_data_converter.formats",
+    "obb_data_converter.gui", 
+    "obb_data_converter.cli", 
+    "obb_data_converter.config",
+    "obb_data_converter.i18n"
+]
 
 [tool.setuptools.dynamic]
-version = {attr = "labelimgobb2DOTA_converter.__version__"}
+version = {attr = "obb_data_converter.__version__"}
 
 [tool.black]
 line-length = 88
@@ -99,12 +108,12 @@ disallow_untyped_decorators = true
 
 [tool.pytest.ini_options]
 minversion = "6.0"
-addopts = "-ra -q --strict-markers --cov=labelimgobb2DOTA_converter --cov-report=term-missing"
+addopts = "-ra -q --strict-markers --cov=obb_data_converter --cov-report=term-missing"
 testpaths = ["tests"]
 pythonpath = ["."]
 
 [tool.coverage.run]
-source = ["labelimgobb2DOTA_converter"]
+source = ["obb_data_converter"]
 omit = [
     "*/tests/*",
     "*/test_*",
