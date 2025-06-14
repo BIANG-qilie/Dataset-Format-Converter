@@ -17,7 +17,7 @@ Dataset Format Converter - 多格式数据集标注转换工具
 - 多语言支持
 """
 
-__version__ = "1.0.1"
+__version__ = "1.0.1.1"
 __author__ = "Blake Zhu"
 __email__ = "2112304124@mail2.gdut.edu.cn"
 
