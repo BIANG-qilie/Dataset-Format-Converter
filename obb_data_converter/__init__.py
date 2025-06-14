@@ -1,5 +1,5 @@
 """
-OBB Data Format Converter - 多格式OBB标注转换工具
+Dataset Format Converter - 多格式数据集标注转换工具
 
 支持多种目标检测标注格式之间的相互转换：
 - YOLO-HBB/YOLO

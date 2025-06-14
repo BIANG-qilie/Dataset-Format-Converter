@@ -23,8 +23,8 @@ from ..config.settings import get_settings, update_settings, save_settings
 from ..i18n.translation import get_available_languages, set_language, t
 
 
-class OBBConverterGUI:
-    """OBB数据格式转换器图形界面"""
+class DatasetConverterGUI:
+    """数据集格式转换器图形界面"""
     
     def __init__(self):
         """初始化GUI"""
@@ -461,7 +461,7 @@ class OBBConverterGUI:
         link_frame.pack(fill=tk.X)
         
         ttk.Label(link_frame, text="GitHub:", style='Header.TLabel').pack(side=tk.LEFT)
-        ttk.Label(link_frame, text="github.com/BIANG-qilie/obb-data-converter", 
+        ttk.Label(link_frame, text="github.com/BIANG-qilie/dataset-format-converter", 
                  style='Info.TLabel', foreground='#0066cc').pack(side=tk.LEFT, padx=(10, 0))
     
     def load_settings(self):
@@ -851,7 +851,7 @@ def main():
         sys.exit(1)
     
     try:
-        app = OBBConverterGUI()
+        app = DatasetConverterGUI()
         app.run()
     except Exception as e:
         print(f"启动GUI失败: {e}")

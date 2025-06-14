@@ -1,7 +1,7 @@
 {
   "app": {
-    "title": "OBB数据格式转换器",
-    "description": "多格式OBB标注转换工具"
+    "title": "数据集格式转换器",
+    "description": "多格式数据集标注转换工具"
   },
   "formats": {
     "yolo_hbb": "YOLO-HBB",

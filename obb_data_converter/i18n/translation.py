@@ -43,8 +43,8 @@ class Translation:
         # 英文翻译
         en_translations = {
             "app": {
-                "title": "OBB Data Format Converter",
-                "description": "Multi-format OBB annotation converter"
+                        "title": "Dataset Format Converter",
+        "description": "Multi-format dataset annotation converter"
             },
             "formats": {
                 "yolo_hbb": "YOLO-HBB",

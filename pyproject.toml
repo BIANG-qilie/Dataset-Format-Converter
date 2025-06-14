@@ -3,12 +3,12 @@ requires = ["setuptools>=45", "wheel", "setuptools_scm"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "obb-data-converter"
+name = "dataset-format-converter"
 dynamic = ["version"]
-description = "多格式OBB标注转换工具 - Multi-format OBB annotation converter"
+description = "多格式数据集标注转换工具 - Multi-format dataset annotation converter"
 readme = "README.md"
 requires-python = ">=3.6"
-license = {text = "MIT"}
+license = "MIT"
 authors = [
     {name = "Blake Zhu", email = "2112304124@mail2.gdut.edu.cn"},
 ]
@@ -56,14 +56,14 @@ test = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/BIANG-qilie/obb-data-converter"
-Documentation = "https://github.com/BIANG-qilie/obb-data-converter#readme"
-Repository = "https://github.com/BIANG-qilie/obb-data-converter.git"
-"Bug Tracker" = "https://github.com/BIANG-qilie/obb-data-converter/issues"
+Homepage = "https://github.com/BIANG-qilie/dataset-format-converter"
+Documentation = "https://github.com/BIANG-qilie/dataset-format-converter#readme"
+Repository = "https://github.com/BIANG-qilie/dataset-format-converter.git"
+"Bug Tracker" = "https://github.com/BIANG-qilie/dataset-format-converter/issues"
 
 [project.scripts]
-obb-data-converter = "obb_data_converter.cli.main:main"
-obb-converter-gui = "obb_data_converter.gui.main_window:main"
+dataset-format-converter = "obb_data_converter.cli.main:main"
+dataset-converter-gui = "obb_data_converter.gui.main_window:main"
 
 [tool.setuptools]
 packages = [
@@ -73,7 +73,8 @@ packages = [
     "obb_data_converter.gui", 
     "obb_data_converter.cli", 
     "obb_data_converter.config",
-    "obb_data_converter.i18n"
+    "obb_data_converter.i18n",
+    "obb_data_converter.i18n.locales"
 ]
 
 [tool.setuptools.dynamic]

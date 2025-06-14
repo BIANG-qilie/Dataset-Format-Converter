@@ -1,4 +1,4 @@
-# OBB Data Format Converter
+# Dataset Format Converter
 
 <div align="center">
 
@@ -6,9 +6,11 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Code Style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
-多格式OBB标注转换工具，支持图形界面和命令行操作。
+多格式数据集标注转换工具，支持图形界面和命令行操作。
 
-Multi-format OBB annotation converter with GUI and CLI support.
+Multi-format dataset annotation converter with GUI and CLI support.
+
+**📖 语言版本 / Language Versions**: [中文](README.md) | [English](README_EN.md)
 
 [功能特性](#功能特性) • [安装方法](#安装方法) • [使用指南](#使用指南) • [项目结构](#项目结构) • [开发指南](#开发指南)
 
@@ -36,26 +38,26 @@ Multi-format OBB annotation converter with GUI and CLI support.
 ### 从PyPI安装
 
 ```bash
-pip install obb-data-converter
+pip install dataset-format-converter
 ```
 
 ### 开发者安装
 ```bash
 # 基本安装
-pip install obb-data-converter
+pip install dataset-format-converter
 
 # 开发者安装  
-pip install obb-data-converter[dev]
+pip install dataset-format-converter[dev]
 
 # 包含GUI支持
-pip install obb-data-converter[gui]
+pip install dataset-format-converter[gui]
 ```
 
 ### 从源码安装
 
 ```bash
-git clone https://github.com/BIANG-qilie/obb-data-converter.git
-cd obb-data-converter
+git clone https://github.com/BIANG-qilie/dataset-format-converter.git
+cd dataset-format-converter
 pip install -e .
 ```
 
@@ -75,31 +77,31 @@ pip install -e .
 
 #### 交互模式
 ```bash
-obb-data-converter
+dataset-format-converter
 ```
 
 #### 直接转换
 ```bash
 # 单文件转换
-obb-data-converter --input input.txt --output output.txt \
+dataset-format-converter --input input.txt --output output.txt \
   --input-format YOLO-OBB --output-format LabelImg-OBB \
   --width 1920 --height 1080
 
 # 目录批量转换
-obb-data-converter --input ./labels --output ./converted \
+dataset-format-converter --input ./labels --output ./converted \
   --input-format DOTA --output-format YOLO-OBB \
   --width 1920 --height 1080
 
 # 指定类别名称文件
-obb-data-converter --input input.txt --output output.txt \
+dataset-format-converter --input input.txt --output output.txt \
   --input-format YOLO-OBB --output-format PASCAL-VOC \
   --width 1920 --height 1080 --classes classes.txt
 
 # 列出所有支持的格式
-obb-data-converter --list-formats
+dataset-format-converter --list-formats
 
 # 设置语言
-obb-data-converter --language zh
+dataset-format-converter --language zh
 ```
 
 ### 图形界面
@@ -107,7 +109,7 @@ obb-data-converter --language zh
 启动GUI界面：
 
 ```bash
-obb-converter-gui
+dataset-converter-gui
 ```
 
 ### Python API
@@ -230,8 +232,8 @@ print(t('messages.conversion_complete'))  # 获取完成消息
 ### 设置开发环境
 
 ```bash
-git clone https://github.com/BIANG-qilie/obb-data-converter.git
-cd obb-data-converter
+git clone https://github.com/BIANG-qilie/dataset-format-converter.git
+cd dataset-format-converter
 
 # 创建虚拟环境
 python -m venv venv

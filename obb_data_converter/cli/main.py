@@ -149,7 +149,7 @@ def main():
     set_language(settings.language)
     
     parser = argparse.ArgumentParser(
-        prog='obb-data-converter',
+        prog='dataset-format-converter',
         description=t('app.description'),
         formatter_class=argparse.RawDescriptionHelpFormatter
     )
