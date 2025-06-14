@@ -113,7 +113,7 @@ dataset-converter-gui
 ### Python API
 
 ```python
-from obb_data_converter import format_manager
+from dataset_format_converter import format_manager
 
 # Single file conversion
 format_manager.convert_file(
@@ -147,7 +147,7 @@ print(f"Detected format: {detected_format}")
 ## 📁 Project Structure
 
 ```
-obb_data_converter/
+dataset_format_converter/
 ├── __init__.py                    # Package initialization
 ├── core/                          # Core functionality
 │   ├── __init__.py
@@ -214,7 +214,7 @@ Each format class inherits from `BaseFormat` and implements the following method
 Supports English and Simplified Chinese interfaces:
 
 ```python
-from obb_data_converter.i18n import set_language, t
+from dataset_format_converter.i18n import set_language, t
 
 # Set language
 set_language('zh')  # Chinese
@@ -243,9 +243,9 @@ pip install -e .[dev]
 
 ### Adding New Format Support
 
-1. Create new format class in `obb_data_converter/formats/` directory
+1. Create new format class in `dataset_format_converter/formats/` directory
 2. Inherit from `BaseFormat` class and implement required methods
-3. Import in `obb_data_converter/formats/__init__.py`
+3. Import in `dataset_format_converter/formats/__init__.py`
 4. Format manager will automatically register the new format
 
 ### Running Tests
@@ -262,10 +262,10 @@ pytest --cov=obb_data_converter --cov-report=html
 
 ```bash
 # Format code
-black obb_data_converter/
+black dataset_format_converter/
 
 # Check code style
-flake8 obb_data_converter/
+flake8 dataset_format_converter/
 ```
 
 ## 📄 Examples
@@ -283,7 +283,7 @@ truck
 
 ### Configuration File
 
-User settings are automatically saved in `~/.obb_data_converter/settings.json`:
+User settings are automatically saved in `~/.dataset_format_converter/settings.json`:
 
 ```json
 {

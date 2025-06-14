@@ -32,9 +32,13 @@ class BoundingBox:
         if self.corners.shape != (4, 2):
             raise ValueError("corners must be a (4, 2) numpy array")
         
-        # 确保坐标是归一化的 (0-1之间)
-        if np.any(self.corners < 0) or np.any(self.corners > 1):
+        # 确保坐标是归一化的 (0-1之间)，允许微小的数值误差
+        tolerance = 1e-6  # 允许微小的数值误差
+        if np.any(self.corners < -tolerance) or np.any(self.corners > 1 + tolerance):
             raise ValueError("All coordinates must be normalized (0-1)")
+        
+        # 将坐标限制在[0, 1]范围内以消除数值误差
+        self.corners = np.clip(self.corners, 0.0, 1.0)
     
     def to_dict(self) -> Dict[str, Any]:
         """转换为字典格式"""

@@ -62,23 +62,23 @@ Repository = "https://github.com/BIANG-qilie/dataset-format-converter.git"
 "Bug Tracker" = "https://github.com/BIANG-qilie/dataset-format-converter/issues"
 
 [project.scripts]
-dataset-format-converter = "obb_data_converter.cli.main:main"
-dataset-converter-gui = "obb_data_converter.gui.main_window:main"
+dataset-format-converter = "dataset_format_converter.cli.main:main"
+dataset-converter-gui = "dataset_format_converter.gui.main_window:main"
 
 [tool.setuptools]
 packages = [
-    "obb_data_converter", 
-    "obb_data_converter.core", 
-    "obb_data_converter.formats",
-    "obb_data_converter.gui", 
-    "obb_data_converter.cli", 
-    "obb_data_converter.config",
-    "obb_data_converter.i18n",
-    "obb_data_converter.i18n.locales"
+    "dataset_format_converter",
+    "dataset_format_converter.core",
+    "dataset_format_converter.formats",
+    "dataset_format_converter.gui",
+    "dataset_format_converter.cli",
+    "dataset_format_converter.config",
+    "dataset_format_converter.i18n",
+    "dataset_format_converter.i18n.locales"
 ]
 
 [tool.setuptools.dynamic]
-version = {attr = "obb_data_converter.__version__"}
+version = {attr = "dataset_format_converter.__version__"}
 
 [tool.black]
 line-length = 88
@@ -109,12 +109,12 @@ disallow_untyped_decorators = true
 
 [tool.pytest.ini_options]
 minversion = "6.0"
-addopts = "-ra -q --strict-markers --cov=obb_data_converter --cov-report=term-missing"
+addopts = "-ra -q --strict-markers --cov=dataset_format_converter --cov-report=term-missing"
 testpaths = ["tests"]
 pythonpath = ["."]
 
 [tool.coverage.run]
-source = ["obb_data_converter"]
+source = ["dataset_format_converter"]
 omit = [
     "*/tests/*",
     "*/test_*",

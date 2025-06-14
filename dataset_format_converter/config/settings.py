@@ -54,7 +54,7 @@ class SettingsManager:
         home_dir = os.path.expanduser('~')
         
         # 创建应用配置目录
-        config_dir = os.path.join(home_dir, '.obb_data_converter')
+        config_dir = os.path.join(home_dir, '.dataset_format_converter')
         if not os.path.exists(config_dir):
             os.makedirs(config_dir)
         

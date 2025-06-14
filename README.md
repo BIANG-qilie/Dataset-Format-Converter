@@ -115,7 +115,7 @@ dataset-converter-gui
 ### Python API
 
 ```python
-from obb_data_converter import format_manager
+from dataset_format_converter import format_manager
 
 # 单文件转换
 format_manager.convert_file(
@@ -149,7 +149,7 @@ print(f"检测到格式: {detected_format}")
 ## 📁 项目结构
 
 ```
-obb_data_converter/
+dataset_format_converter/
 ├── __init__.py                    # 包初始化
 ├── core/                          # 核心功能
 │   ├── __init__.py
@@ -216,7 +216,7 @@ obb_data_converter/
 支持英文和简体中文界面：
 
 ```python
-from obb_data_converter.i18n import set_language, t
+from dataset_format_converter.i18n import set_language, t
 
 # 设置语言
 set_language('zh')  # 中文
@@ -285,7 +285,7 @@ truck
 
 ### 配置文件
 
-用户设置自动保存在`~/.obb_data_converter/settings.json`：
+用户设置自动保存在`~/.dataset_format_converter/settings.json`：
 
 ```json
 {
