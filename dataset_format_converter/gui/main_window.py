@@ -204,7 +204,7 @@ class DatasetConverterGUI:
     
     def create_format_selection_step(self, parent, row):
         """步骤1：格式选择"""
-        step_frame = ttk.LabelFrame(parent, text=f"📋 {t('gui.step1_formats')}", padding="20")
+        step_frame = ttk.LabelFrame(parent, text=f"{t('gui.step1_formats')}", padding="20")
         step_frame.grid(row=row, column=0, sticky=(tk.W, tk.E), pady=(0, 20))
         step_frame.columnconfigure(1, weight=1)
         
@@ -259,7 +259,7 @@ class DatasetConverterGUI:
     
     def create_input_selection_step(self, parent, row):
         """步骤2：输入选择"""
-        step_frame = ttk.LabelFrame(parent, text=f"📂 {t('gui.step2_input')}", padding="20")
+        step_frame = ttk.LabelFrame(parent, text=f"▶ {t('gui.step2_input')}", padding="20")
         step_frame.grid(row=row, column=0, sticky=(tk.W, tk.E), pady=(0, 20))
         step_frame.columnconfigure(0, weight=1)
         
@@ -292,7 +292,7 @@ class DatasetConverterGUI:
     
     def create_output_selection_step(self, parent, row):
         """步骤3：输出选择"""
-        step_frame = ttk.LabelFrame(parent, text=f"📁 {t('gui.step3_output')}", padding="20")
+        step_frame = ttk.LabelFrame(parent, text=f"▷ {t('gui.step3_output')}", padding="20")
         step_frame.grid(row=row, column=0, sticky=(tk.W, tk.E), pady=(0, 20))
         step_frame.columnconfigure(0, weight=1)
         
@@ -316,7 +316,7 @@ class DatasetConverterGUI:
     
     def create_dimensions_step(self, parent, row):
         """步骤4：图片尺寸"""
-        step_frame = ttk.LabelFrame(parent, text=f"📐 {t('gui.step4_dimensions')}", padding="20")
+        step_frame = ttk.LabelFrame(parent, text=f"▣ {t('gui.step4_dimensions')}", padding="20")
         step_frame.grid(row=row, column=0, sticky=(tk.W, tk.E), pady=(0, 20))
         
         # 尺寸输入
@@ -351,7 +351,7 @@ class DatasetConverterGUI:
     
     def create_classes_confirmation_step(self, parent, row):
         """步骤5：类别确认"""
-        step_frame = ttk.LabelFrame(parent, text=f"🏷️ {t('gui.step5_classes')}", padding="20")
+        step_frame = ttk.LabelFrame(parent, text=f"● {t('gui.step5_classes')}", padding="20")
         step_frame.grid(row=row, column=0, sticky=(tk.W, tk.E), pady=(0, 20))
         step_frame.columnconfigure(0, weight=1)
         
@@ -381,7 +381,7 @@ class DatasetConverterGUI:
     
     def create_conversion_step(self, parent, row):
         """转换步骤"""
-        step_frame = ttk.LabelFrame(parent, text=f"🚀 {t('gui.step6_convert')}", padding="20")
+        step_frame = ttk.LabelFrame(parent, text=f"→ {t('gui.step6_convert')}", padding="20")
         step_frame.grid(row=row, column=0, sticky=(tk.W, tk.E), pady=(0, 20))
         step_frame.columnconfigure(0, weight=1)
         

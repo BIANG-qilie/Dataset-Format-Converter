@@ -50,3 +50,6 @@ Thumbs.db
 # 构建和上传脚本（不上传到git）
 build_and_upload.bat
 build_and_upload_pypi.bat 
+
+#测试文件
+Test Data/
